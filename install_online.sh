@@ -2,5 +2,5 @@
 
 apt update
 
-apt -qq -y install openssl nodejs python
+yes N | apt -qq -y install openssl nodejs python
 npm install wstunnel

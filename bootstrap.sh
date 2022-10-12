@@ -7,4 +7,4 @@ cd wstunnel_automation-master
 
 if [ "$1" ]; then
   ./connect.sh $1
-else
+fi

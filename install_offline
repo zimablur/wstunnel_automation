@@ -1,0 +1,9 @@
+#!/bin/env bash
+
+tar -xzvf packages_android.tar.gz
+cd packages
+dpkg -i *.deb
+
+cd ..
+tar -xzvf wstunnel_android.tar.gz
+cd wstunnel

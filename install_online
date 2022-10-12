@@ -1,0 +1,5 @@
+#!/bin/env bash
+
+apt update
+apt install -y openssl nodejs
+npm install wstunnel

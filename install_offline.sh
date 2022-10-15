@@ -6,7 +6,7 @@ if ! [ -n "$1" ]; then
 fi
 
 if ! [ -f wstunnel_offline_assets.zip ]; then
-	curl -o wstunnel_offline_assets.zip $asset_files_link
+	curl -L -o wstunnel_offline_assets.zip $asset_files_link
 fi
 
 unzip -o wstunnel_offline_assets.zip

@@ -29,7 +29,7 @@ fi
 
 if ! [ -f wstunnel_automation.zip ]; then
   echo "downloading automation files from $automation_files_link"
-  curl -o wstunnel_automation.zip $automation_files_link
+  curl -L -o wstunnel_automation.zip $automation_files_link
 fi
 
 unzip -o wstunnel_automation.zip

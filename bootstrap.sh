@@ -33,6 +33,11 @@ if ! [ -f wstunnel_automation.zip ]; then
 fi
 
 unzip -o wstunnel_automation.zip
+
+if [ -f wstunnel_offline_assets.zip ]; then
+  mv wstunnel_offline_assets.zip wstunnel_automation-master/
+fi
+
 cd wstunnel_automation-master
 ./install_$mode.sh $asset_files_link
 cp connect.sh ~/

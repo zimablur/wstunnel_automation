@@ -34,7 +34,7 @@ fi
 
 unzip -o wstunnel_automation.zip
 cd wstunnel_automation-master
-./install_$mode.sh
+./install_$mode.sh $asset_files_link
 cp connect.sh ~/
 
 if [ -n "$server_addr" ]; then

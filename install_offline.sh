@@ -1,7 +1,7 @@
 #!/bin/env bash
 
 asset_files_link="https://github.com/zimablur/wstunnel_offline_assets/archive/refs/heads/master.zip"
-if ! [ -n "$1" ]; then
+if [ -z "$1" ]; then
   asset_files_link=$1
 fi
 

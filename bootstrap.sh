@@ -21,7 +21,8 @@ curl -L -o wstunnel_automation.zip https://github.com/zimablur/wstunnel_automati
 unzip wstunnel_automation.zip
 cd wstunnel_automation-master
 ./install_$mode.sh
+cp connect.sh ~/
 
 if [ -n "$server" ]; then
-  ./connect.sh $server
+  ~/connect.sh $server
 fi

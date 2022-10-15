@@ -12,7 +12,7 @@ fi
 unzip -o wstunnel_offline_assets.zip
 cd wstunnel_offline_assets-master
 
-tar -xzvf termux_packages_android_arm64.tar.gz
+tar -xzvf termux_packages_android_$(dpkg --print-architecture).tar.gz
 tar -xzvf wstunnel_android.tar.gz
 
 cd termux_packages_android

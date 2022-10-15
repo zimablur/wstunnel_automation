@@ -8,12 +8,12 @@ do
     esac
 done
 
-if ![ -n "$mode" ]; then
+if ! [ -n "$mode" ]; then
   mode="offline"
 fi
 
 if [ "$mode" != "online" ] && [ "$mode" != "offline" ]; then
-  echo "invalid "
+  echo "Invalid mode \"$mode\"! It should either be \"offline\" or \"online\""
   exit 1;
 fi
 

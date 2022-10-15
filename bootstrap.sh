@@ -1,10 +1,12 @@
 #!/bin/env bash
 
-while getopts m:s: flag
+while getopts m:a:l: flag
 do
     case "${flag}" in
         m) mode=${OPTARG};;
-        s) server=${OPTARG};;
+        a) server_addr=${OPTARG};;
+        l) automation_files_link=${OPTARG};;
+        s) asset_files_link=${OPTARG};;
     esac
 done
 
@@ -12,17 +14,28 @@ if ! [ -n "$mode" ]; then
   mode="offline"
 fi
 
+if ! [ -n "$automation_files_link" ]; then
+  automation_files_link="https://github.com/zimablur/wstunnel_automation/archive/refs/heads/master.zip"
+fi
+
+if ! [ -n "$asset_files_link" ]; then
+  asset_files_link="https://github.com/zimablur/wstunnel_offline_assets/archive/refs/heads/master.zip"
+fi
+
 if [ "$mode" != "online" ] && [ "$mode" != "offline" ]; then
   echo "Invalid mode \"$mode\"! It should either be \"offline\" or \"online\""
   exit 1;
 fi
 
-curl -L -o wstunnel_automation.zip https://github.com/zimablur/wstunnel_automation/archive/refs/heads/master.zip
+if ! [ -f wstunnel_automation.zip ]; then
+  curl -o wstunnel_automation.zip $automation_files_link
+fi
+
 unzip wstunnel_automation.zip
 cd wstunnel_automation-master
 ./install_$mode.sh
 cp connect.sh ~/
 
-if [ -n "$server" ]; then
-  ~/connect.sh $server
+if [ -n "$server_addr" ]; then
+  ~/connect.sh $server_addr
 fi

@@ -28,10 +28,11 @@ if [ "$mode" != "online" ] && [ "$mode" != "offline" ]; then
 fi
 
 if ! [ -f wstunnel_automation.zip ]; then
+  echo "downloading automation files from $automation_files_link"
   curl -o wstunnel_automation.zip $automation_files_link
 fi
 
-unzip wstunnel_automation.zip
+unzip -o wstunnel_automation.zip
 cd wstunnel_automation-master
 ./install_$mode.sh
 cp connect.sh ~/

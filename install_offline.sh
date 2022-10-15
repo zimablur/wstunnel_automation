@@ -9,7 +9,7 @@ if ! [ -f wstunnel_offline_assets.zip ]; then
 	curl -o wstunnel_offline_assets.zip $asset_files_link
 fi
 
-unzip wstunnel_offline_assets.zip
+unzip -o wstunnel_offline_assets.zip
 cd wstunnel_offline_assets-master
 
 tar -xzvf termux_packages_android.tar.gz

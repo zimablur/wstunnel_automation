@@ -2,7 +2,7 @@
 
 curl -L -o wstunnel_offline_assets.zip https://github.com/zimablur/wstunnel_offline_assets/archive/refs/heads/master.zip
 unzip wstunnel_offline_assets.zip
-cd wstunnel_offline_assets
+cd wstunnel_offline_assets-master
 
 tar -xzvf termux_packages_android.tar.gz
 tar -xzvf wstunnel_android.tar.gz

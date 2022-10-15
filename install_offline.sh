@@ -8,7 +8,8 @@ tar -xzvf termux_packages_android.tar.gz
 tar -xzvf wstunnel_android.tar.gz
 
 cd termux_packages_android
-dpkg -i *.deb
+yes N | dpkg -i *.deb
 
 cd ../wstunnel
 mv node_modules ~/
+termux-fix-shebang ~/node_modules/.bin/wstunnel

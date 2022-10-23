@@ -19,5 +19,6 @@ cd termux_packages_android
 yes N | dpkg -i *.deb
 
 cd ../wstunnel
+rm -rf ~/node_modules
 mv node_modules ~/
 termux-fix-shebang ~/node_modules/.bin/wstunnel

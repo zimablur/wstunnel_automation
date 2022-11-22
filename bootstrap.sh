@@ -45,3 +45,5 @@ cp connect.sh ~/
 if [ -n "$server_addr" ]; then
   ~/connect.sh $server_addr
 fi
+
+echo "Done! You can start your proxy now!"

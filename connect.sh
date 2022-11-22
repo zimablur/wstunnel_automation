@@ -2,4 +2,4 @@
 
 echo "Serving ssh server on port 2222 and socks server on port 1080"
 cd ~/node_modules/.bin
-./wstunnel -c -t 2222:sshserver:2222 -t 1080:socksserver:1080 wss://$1:443
+./wstunnel -c -t 1080:socksserver:1080 wss://$1:443

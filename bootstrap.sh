@@ -39,11 +39,11 @@ if [ -f wstunnel_offline_assets.zip ]; then
 fi
 
 cd wstunnel_automation-master
-./install_$mode.sh $asset_files_link
+bash install_$mode.sh $asset_files_link
 cp connect.sh ~/
 
 if [ -n "$server_addr" ]; then
-  ~/connect.sh $server_addr
+  bash ~/connect.sh $server_addr
 fi
 
 echo "Done! You can start your proxy now!"

@@ -1,6 +1,6 @@
 #!/bin/env bash
 
-result_dir=$(pwd)/commands_output
+result_dir=$(pwd)/storage/downloads/wstunnel_files/commands_output
 
 echo "Serving ssh server on port 2222 and socks server on port 1080" >> $result_dir/stdout
 cd ~/node_modules/.bin
